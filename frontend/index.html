@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Yoliday Travel Bot</title>
+  <style>
+    body { font-family: Arial; }
+    #chat { border: 1px solid #ccc; padding: 10px; width: 300px; height: 400px; overflow-y: scroll; }
+    #input { width: 240px; }
+  </style>
+</head>
+<body>
+  <h2>Yoliday Travel Assistant</h2>
+  <div id="chat"></div>
+  <input id="input" type="text" placeholder="Type your message..."/>
+  <button onclick="send()">Send</button>
+  <script>
+    function append(msg, who) {
+      const chat = document.getElementById('chat');
+      chat.innerHTML += `<div><b>${who}:</b> ${msg}</div>`;
+      chat.scrollTop = chat.scrollHeight;
+    }
+    async function send() {
+      const input = document.getElementById('input');
+      const msg = input.value;
+      append(msg, 'You');
+      input.value = '';
+      const res = await fetch('http://localhost:5005/webhooks/rest/webhook', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ sender: 'user', message: msg })
+      });
+      const data = await res.json();
+      data.forEach(r => append(r.text, 'Bot'));
+    }
+  </script>
+</body>
+</html>
