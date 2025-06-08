@@ -5,7 +5,6 @@ Yoliday Rasa Bot Development Internship Assessment
 ![Yoliday Banner](demo.png)
 
 Welcome to the **Yoliday Travel Assistant Bot**, built using [Rasa](https://rasa.com/)!  
-This project was developed as part of the **Yoliday LLP Rasa Bot Development Internship Assessment**.
 
 The chatbot assists users with:
 - Travel planning
@@ -43,29 +42,6 @@ Live Demo: 👉 [Try it here!](https://your-live-bot-link.vercel.app)
 
 ---
 
-## 🖥️ Screenshots
-
-### 🌍 Frontend UI
-![Frontend](./screenshots/frontend_ui.png)
-
-### 💬 Chatbot Conversation (English)
-![Conversation English](./screenshots/chat_english.png)
-
-### 🇮🇳 Chatbot Conversation (Hindi)
-![Conversation Hindi](./screenshots/chat_hindi.png)
-
-### 📊 Conversation Logs
-![Conversation Logs](./screenshots/logs_ui.png)
-
----
-
-## 🛠️ Tech Stack
-
-- **Rasa** (NLU + Core)
-- **Custom Actions** in Python
-- **React Frontend** (hosted on Vercel)
-- **Weather API**: OpenWeatherMap
-- **Deployment**: Railway / Render / Replit + ngrok
 
 ---
 
