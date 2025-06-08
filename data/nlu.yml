@@ -1,0 +1,117 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hi
+    - hello
+    - hey
+    - नमस्ते
+    - हाय
+    - आपसे मिलकर खुशी हुई
+    - बहुत दिनों बाद मिल रहे हैं
+    - शुभ दिन
+    - क्या हाल है?
+    - कैसे हो आप?
+
+- intent: faq/what_is_rasa
+  examples: |
+    - What is Rasa?
+    - रासा क्या है?
+
+- intent: faq/who_built_you
+  examples: |
+    - Who built you?
+    - आपको किसने बनाया?
+
+- intent: faq/how_to_plan_trip
+  examples: |
+    - How can I plan my trip?
+    - मैं अपनी यात्रा कैसे प्लान करूं?
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you
+    - अलविदा
+    - फिर मिलेंगे
+    - आपसे बात करके अच्छा लगा, अब चलता हूँ
+    - अब मुझे जाना होगा
+    - मिलते हैं फिर
+    - अपना ख्याल रखना
+    - शुभकामनाएँ, अगली बार बात करेंगे
+
+- intent: ask_weather
+  examples: |
+    - what's the weather in [Delhi](location) on [Monday](date)?
+    - weather forecast for [Mumbai](location) [tomorrow](date)
+    - what's the weather in [Mumbai](location) next week?
+    - I want to travel to [Mumbai](location) next week
+    - Will it rain in [Goa](location) on [15th June](date)?
+    - How is the weather in [Bangalore](location) tomorrow?
+    - मैं [जयपुर](location) में [कल](date) यात्रा करना चाहता हूँ
+    - will it rain in [Delhi](location) tomorrow?
+    - will it rain in [Goa](location) on [15th June](date)?
+    - [जयपुर](location) में [कल](date) मौसम कैसा है?
+    - [श्रीनगर](location) में अगले हफ्ते बारिश की संभावना है क्या?
+    - [भोपाल](location) का तापमान [अगले सोमवार](date) को कितना होगा?
+    - क्या [15 जून](date) को [मनाली](location) में धूप खिलेगी?
+    - [अहमदाबाद](location) में आने वाले सप्ताह का मौसम कैसा रहेगा?
+    - [कोलकाता](location) में नमी कितनी रहेगी [शनिवार](date) को?
+    - I will travel on [June 10](date)
+    - My trip starts [next Monday](date)
+    - The trip ends on [June 15](date)
+    - I am going to [Mumbai](location) next week
+    - How's the weather in [Delhi](location)?
+    - Will it rain in [Bangalore](location) tomorrow?
+
+- intent: recommend_packing
+  examples: |
+    - what should I pack for [Bangalore](location) in [June](date)?
+    - packing advice for [Shimla](location) next week
+    - [गोवा](location) के लिए क्या पैक करूं?
+    - [लेह](location) जाते समय कौन-कौन सी चीजें ले जानी चाहिए [जुलाई](date) में?
+    - [उदयपुर](location) के लिए हल्के कपड़े सही रहेंगे या गरम कपड़े?
+    - [दिसंबर](date) में [दिल्ली](location) की यात्रा के लिए क्या जरूरी सामान है?
+    - [लद्दाख](location) के लिए ऑक्सीजन कैन जरूरी है क्या?
+    - [केरल](location) के मानसून में क्या चीजें पैक करनी चाहिए?
+    - मैं [दार्जिलिंग](location) घूमने जा रहा हूँ, क्या छाता और जैकेट ले जाना चाहिए?
+
+- intent: fallback
+  examples: |
+    - I did not understand. 
+    - Can you please clarify again?
+    - मुझे समझ नहीं आया
+    - क्या कह रहे हो?
+    - ज़रा फिर से समझाओ
+    - ये क्या मतलब हुआ?
+    - आपकी बात समझ में नहीं आई
+    - इसका क्या मतलब हुआ?
+    - क्षमा करें, मैं आपकी बात पकड़ नहीं पाया
+    - क्या आप दोबारा कह सकते हैं?
+    - huh?
+    - क्या बोल रहे हो तुम?
+    - Umm... what?
+    - Err... फिर से?
+
+
+- lookup: location
+  examples: |
+    - Delhi
+    - Mumbai
+    - Bangalore
+    - जयपुर
+    - गोवा
+
+- lookup: date
+  examples: |
+    - tomorrow
+    - next Monday
+    - 15th June
+    - कल
+    - शनिवार
+
+- regex: date
+  examples: |
+    - \d{1,2}(st|nd|rd|th)?\s(January|February|...|December)
+    - \d{2}/\d{2}/\d{4}
