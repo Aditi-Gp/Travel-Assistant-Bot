@@ -2,7 +2,7 @@
 Yoliday Rasa Bot Development Internship Assessment
 # 🧳 Yoliday Travel Assistant Chatbot (Rasa Bot Internship Project)
 
-![Yoliday Banner](./screenshots/yoliday_banner.png)
+![Yoliday Banner](demo.png)
 
 Welcome to the **Yoliday Travel Assistant Bot**, built using [Rasa](https://rasa.com/)!  
 This project was developed as part of the **Yoliday LLP Rasa Bot Development Internship Assessment**.
