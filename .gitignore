@@ -1,8 +1,9 @@
-# .gitignore
-models/  # only if retraining in production
 node_modules/
 yoliday-frontend/node_modules/
 yoliday-frontend/build/
 .env
 __pycache__/
 *.pyc
+
+.env
+
