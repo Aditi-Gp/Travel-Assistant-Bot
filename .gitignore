@@ -7,3 +7,4 @@ yoliday-frontend/build/
 __pycache__/
 *.pyc
 
+*.pyc
